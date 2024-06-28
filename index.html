@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <img src="assets/Logo.png" class="logo_header">
+    </header>
+    <main class="container_main">
+        <div class="container_input">
+            <input type="text" id="textConvert" class="text_to_convert" contextmenu="ingrese el texto aqui">
+            <div class="text_alert">
+                <img src="assets/alert.png">
+                <p>solo letras minusculas y sin acentos</p>
+            </div>
+            <div class="container_buttons">
+                <button onclick="encriptar()" class="button_encrypt">Encriptar</button>
+                <button onclick="encriptar()" class="button_decrypt">Desencriptar</button>
+            </div>
+        </div>
+        <div class="container_output">
+            <div class="output_clear">
+                <img src="assets/Muñeco.png">
+                <h2>Ningun mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div class="output_result">
+                <p class="output_result_text"></p>
+                <button>Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Angel Rojas</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
