@@ -12,14 +12,18 @@
     </header>
     <main class="container_main">
         <div class="container_input">
-            <textarea id="textConvert" class="text_to_convert" placeholder="Ingrese el texto aquí" oninput="autoResize(this)"></textarea>
-            <div class="text_alert">
-                <img src="assets/alert.png">
-                <p>Solo letras minúsculas y sin acentos</p>
+            <div class="container_textarea">
+                <textarea id="textConvert" class="text_to_convert" placeholder="Ingrese el texto aquí" oninput="autoResize(this)"></textarea>
             </div>
-            <div class="container_buttons">
-                <button onclick="encriptar()" class="button_encrypt">Encriptar</button>
-                <button onclick="desencriptar()" class="button_decrypt">Desencriptar</button>
+            <div class="container_zone_buttons">
+                <div class="text_alert">
+                    <img src="assets/alert.png">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="container_buttons">
+                    <button onclick="encriptar()" class="button_encrypt">Encriptar</button>
+                    <button onclick="desencriptar()" class="button_decrypt">Desencriptar</button>
+                </div>
             </div>
         </div>
         <div class="container_output">

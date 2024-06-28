@@ -44,13 +44,13 @@ function copiarTexto() {
     alert('Texto copiado al portapapeles');
 }
 
-// Ajustar el tamaño del textarea automáticamente
 function autoResize(textarea) {
     textarea.style.height = 'auto';
     textarea.style.height = (textarea.scrollHeight) + 'px';
 }
 
-// Agregar el evento input para ajustar el tamaño del textarea automáticamente
-document.getElementById('textConvert').addEventListener('input', function() {
-    autoResize(this);
+// Inicialmente ajusta el tamaño del textarea al placeholder
+document.addEventListener("DOMContentLoaded", function() {
+    const textarea = document.getElementById("textConvert");
+    autoResize(textarea);
 });

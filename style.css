@@ -2,7 +2,7 @@
     --color-primary: #f6f6f6;
     --color-secondary: #000000;
     --color-tertiary: #0A3871;
-    --color-border: #20c2f3; /* Añadido */
+    --color-border: #20c2f3; 
 }
 
 * {
@@ -43,27 +43,24 @@ body {
     padding: 20px;
 }
 
-.container_input, .container_output {
+.container_input {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    /*border: 2px dashed var(--color-border); /* Añadido */
-}
-.container_output{
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    border: 2px dashed var(--color-border); /* Añadido */
 }
 
-.container_input {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container_output {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border: 2px dashed var(--color-border);
+}
+
+.container_textarea {
     margin-bottom: 20px;
 }
 
@@ -73,14 +70,13 @@ body {
     height: auto;
     min-height: 150px;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 2px dashed var(--color-border); /* Añadido */
-    border-radius: 8px; /* Añadido */
+    border: 2px dashed var(--color-border);
+    border-radius: 8px; 
     resize: none;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
-/* Cambiar el color del placeholder */
 .text_to_convert::placeholder {
     color: var(--color-tertiary);
 }
@@ -94,10 +90,16 @@ body {
     color: #55555571;
 }
 
+.container_zone_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .container_buttons {
     display: flex;
     gap: 10px;
-    margin-top: 669px;
     width: 100%;
     justify-content: center;
 }
@@ -175,8 +177,8 @@ body {
     display: block;
 }
 
-/* Estilos responsivos */
-@media (min-width: 768px) {
+
+@media (max-width: 800px) {
     .container_main {
         flex-direction: row;
         justify-content: space-between;
