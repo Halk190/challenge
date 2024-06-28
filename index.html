@@ -12,25 +12,25 @@
     </header>
     <main class="container_main">
         <div class="container_input">
-            <input type="text" id="textConvert" class="text_to_convert" contextmenu="ingrese el texto aqui">
+            <textarea id="textConvert" class="text_to_convert" placeholder="Ingrese el texto aquí" oninput="autoResize(this)"></textarea>
             <div class="text_alert">
                 <img src="assets/alert.png">
-                <p>solo letras minusculas y sin acentos</p>
+                <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="container_buttons">
                 <button onclick="encriptar()" class="button_encrypt">Encriptar</button>
-                <button onclick="encriptar()" class="button_decrypt">Desencriptar</button>
+                <button onclick="desencriptar()" class="button_decrypt">Desencriptar</button>
             </div>
         </div>
         <div class="container_output">
             <div class="output_clear">
                 <img src="assets/Muñeco.png">
-                <h2>Ningun mensaje fue encontrado</h2>
+                <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
-            <div class="output_result">
+            <div class="output_result hidden">
                 <p class="output_result_text"></p>
-                <button>Copiar</button>
+                <button onclick="copiarTexto()">Copiar</button>
             </div>
         </div>
     </main>
