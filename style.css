@@ -2,6 +2,7 @@
     --color-primary: #f6f6f6;
     --color-secondary: #000000;
     --color-tertiary: #0A3871;
+    --color-border: #20c2f3; /* Añadido */
 }
 
 * {
@@ -23,7 +24,7 @@ body {
 .header {
     width: 100%;
     display: flex;
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: flex-start;
     padding: 2%;
 }
 
@@ -48,6 +49,15 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
+    /*border: 2px dashed var(--color-border); /* Añadido */
+}
+.container_output{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border: 2px dashed var(--color-border); /* Añadido */
 }
 
 .container_input {
@@ -64,10 +74,10 @@ body {
     min-height: 150px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none; /* Evita que el usuario cambie el tamaño manualmente */
-    overflow: hidden; /* Oculta el scrollbar */
+    border: 2px dashed var(--color-border); /* Añadido */
+    border-radius: 8px; /* Añadido */
+    resize: none;
+    overflow: hidden;
 }
 
 /* Cambiar el color del placeholder */
@@ -77,7 +87,7 @@ body {
 
 .text_alert {
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 20px;
     font-size: 0.9rem;
@@ -115,7 +125,7 @@ body {
     text-align: center;
 }
 
-.output_clear{
+.output_clear {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -147,7 +157,7 @@ body {
     margin-bottom: 20px;
 }
 
-.footer{
+.footer {
     background-color: var(--color-tertiary);
     padding: 1.5rem;
     color: var(--color-primary);
