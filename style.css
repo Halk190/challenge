@@ -178,7 +178,7 @@ body {
 }
 
 
-@media (max-width: 800px) {
+@media (min-width: 1100px) {
     .container_main {
         flex-direction: row;
         justify-content: space-between;
@@ -186,10 +186,46 @@ body {
 
     .container_input {
         margin-bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container_textarea{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container_output{
+        margin-bottom: 0;
+    }
+
+    .output_clear{
+        width: auto;
     }
 
     .container_buttons {
         margin-top: 20px;
         gap: 24px;
+    }
+}
+
+@media (max-width: 1100px)
+{
+    .output_image {
+        display: none;
+    }
+
+    .container_buttons {
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container_textarea {
+        justify-content: center;
+    }
+
+    .text_to_convert {
+        max-width: 90%;
     }
 }
